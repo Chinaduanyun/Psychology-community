@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     navItems.forEach((item, index) => {
         item.addEventListener('click', function() {
             // 获取要导航到的页面
-            const pages = ['home.html', 'courses.html', 'activities.html', 'messages.html', 'profile.html'];
+            const pages = ['index.html', 'courses.html', 'activities.html', 'messages.html', 'profile.html'];
             if (pages[index]) {
                 // 清除所有active类
                 navItems.forEach(i => i.classList.remove('active'));

@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
             
             // 导航到相应页面
-            const pages = ['home.html', 'courses.html', 'activities.html', 'messages.html', 'profile.html'];
+            const pages = ['index.html', 'courses.html', 'activities.html', 'messages.html', 'profile.html'];
             if (pages[index]) {
                 handleNavigation(pages[index]);
             }
@@ -841,9 +841,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     } else if (currentPath.includes('message_center.html')) {
                         handleNavigation('messages.html');
                     } else if (currentPath.includes('search.html')) {
-                        handleNavigation('home.html');
+                        handleNavigation('index.html');
                     } else {
-                        handleNavigation('home.html');
+                        handleNavigation('index.html');
                     }
                 });
             }
