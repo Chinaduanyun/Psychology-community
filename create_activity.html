@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>发布活动</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/interactive.css">
+</head>
+<body class="m-0 p-0">
+    <div class="iphone-frame mx-auto">
+        <!-- 状态栏 -->
+        <div class="status-bar">
+            <div>9:41</div>
+            <div class="flex items-center">
+                <i class="fas fa-signal mr-1"></i>
+                <i class="fas fa-wifi mr-1"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+
+        <!-- 内容区域 -->
+        <div class="content bg-gray-50">
+            <!-- 头部 -->
+            <div class="flex items-center justify-between px-4 py-3 bg-white">
+                <div class="flex items-center">
+                    <button id="backButton" class="mr-2">
+                        <i class="fas fa-chevron-left text-gray-500"></i>
+                    </button>
+                    <h1 class="text-lg font-semibold">发布活动</h1>
+                </div>
+                <button id="publishButton" class="text-blue-500 font-medium">发布</button>
+            </div>
+            
+            <!-- 表单区域 -->
+            <div class="p-4">
+                <!-- 封面图片 -->
+                <div class="bg-white rounded-lg p-4 mb-4">
+                    <h2 class="text-base font-medium mb-2">活动封面</h2>
+                    <div id="coverImage" class="w-full h-48 bg-gray-200 rounded-lg flex items-center justify-center cursor-pointer">
+                        <div class="text-center">
+                            <i class="fas fa-image text-gray-400 text-4xl"></i>
+                            <p class="text-gray-500 mt-2">点击添加封面图片</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 活动标题 -->
+                <div class="bg-white rounded-lg p-4 mb-4">
+                    <h2 class="text-base font-medium mb-2">活动标题</h2>
+                    <input type="text" id="activityTitle" class="w-full border border-gray-200 rounded-lg p-3 text-base" placeholder="输入活动标题（20字以内）">
+                    <div class="flex justify-end">
+                        <span id="titleCount" class="text-xs text-gray-400 mt-1">0/20</span>
+                    </div>
+                </div>
+                
+                <!-- 活动类型 -->
+                <div class="bg-white rounded-lg p-4 mb-4">
+                    <h2 class="text-base font-medium mb-2">活动类型</h2>
+                    <div class="flex flex-wrap gap-2 mt-2">
+                        <button class="activity-type-btn px-4 py-2 border border-gray-200 rounded-lg text-sm" data-type="选课分享">选课分享</button>
+                        <button class="activity-type-btn px-4 py-2 border border-gray-200 rounded-lg text-sm" data-type="经验交流">经验交流</button>
+                        <button class="activity-type-btn px-4 py-2 border border-gray-200 rounded-lg text-sm" data-type="学术讲座">学术讲座</button>
+                        <button class="activity-type-btn px-4 py-2 border border-gray-200 rounded-lg text-sm" data-type="社团活动">社团活动</button>
+                        <button class="activity-type-btn px-4 py-2 border border-gray-200 rounded-lg text-sm" data-type="考研经验">考研经验</button>
+                    </div>
+                </div>
+                
+                <!-- 活动时间 -->
+                <div class="bg-white rounded-lg p-4 mb-4">
+                    <h2 class="text-base font-medium mb-2">活动时间</h2>
+                    <div class="flex items-center">
+                        <input type="date" id="activityDate" class="flex-1 border border-gray-200 rounded-lg p-3 text-sm">
+                        <span class="mx-2">至</span>
+                        <input type="time" id="activityTime" class="flex-1 border border-gray-200 rounded-lg p-3 text-sm">
+                    </div>
+                </div>
+                
+                <!-- 活动地点 -->
+                <div class="bg-white rounded-lg p-4 mb-4">
+                    <h2 class="text-base font-medium mb-2">活动地点</h2>
+                    <input type="text" id="activityLocation" class="w-full border border-gray-200 rounded-lg p-3 text-base" placeholder="输入活动地点">
+                </div>
+                
+                <!-- 主讲人 -->
+                <div class="bg-white rounded-lg p-4 mb-4">
+                    <h2 class="text-base font-medium mb-2">主讲人</h2>
+                    <input type="text" id="activitySpeaker" class="w-full border border-gray-200 rounded-lg p-3 text-base" placeholder="输入主讲人姓名和职称">
+                </div>
+                
+                <!-- 活动介绍 -->
+                <div class="bg-white rounded-lg p-4 mb-4">
+                    <h2 class="text-base font-medium mb-2">活动介绍</h2>
+                    <textarea id="activityDescription" class="w-full border border-gray-200 rounded-lg p-3 text-base h-32" placeholder="活动介绍和详情（500字以内）"></textarea>
+                    <div class="flex justify-end">
+                        <span id="descCount" class="text-xs text-gray-400 mt-1">0/500</span>
+                    </div>
+                </div>
+                
+                <!-- 活动人数 -->
+                <div class="bg-white rounded-lg p-4 mb-4">
+                    <h2 class="text-base font-medium mb-2">活动人数限制</h2>
+                    <div class="flex items-center">
+                        <div class="flex-1 border border-gray-200 rounded-lg p-3 flex items-center">
+                            <span class="text-gray-400 mr-2">限制</span>
+                            <input type="number" id="activityLimit" class="flex-1 text-right" placeholder="0" min="0">
+                            <span class="ml-2">人参与</span>
+                        </div>
+                        <button class="ml-3 px-4 py-3 border border-gray-200 rounded-lg" id="noLimit">
+                            <span class="text-sm">不限制</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 加载JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/activity.js"></script>
+</body>
+</html>

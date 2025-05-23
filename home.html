@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>首页</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/interactive.css">
+</head>
+<body class="m-0 p-0">
+    <div class="iphone-frame mx-auto">
+        <!-- 状态栏 -->
+        <div class="status-bar">
+            <div>9:41</div>
+            <div class="flex items-center">
+                <i class="fas fa-signal mr-1"></i>
+                <i class="fas fa-wifi mr-1"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+
+        <!-- 内容区域 -->
+        <div class="content bg-gray-50">
+            <!-- 搜索栏 -->
+            <div class="bg-white p-4 flex justify-between items-center">
+                <div class="flex-1 bg-gray-100 rounded-full py-2 px-4 flex items-center">
+                    <i class="fas fa-search text-gray-400 mr-2"></i>
+                    <span class="text-gray-400 text-sm">搜索课程、专业教师</span>
+                </div>
+                <div class="ml-4 flex">
+                    <i class="fas fa-bell text-gray-500 text-xl relative">
+                        <div class="w-2 h-2 rounded-full bg-red-500 absolute right-0 top-0"></div>
+                    </i>
+                    <i class="fas fa-user-circle ml-4 text-gray-500 text-xl"></i>
+                </div>
+            </div>
+
+            <!-- 轮播图 -->
+            <div class="relative h-48 mx-4 mt-4 rounded-xl overflow-hidden">
+                <img src="https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg" class="w-full h-full object-cover" alt="2024春季选课">
+                <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black to-transparent text-white">
+                    <h2 class="text-xl font-bold">2024春季选课即将开始</h2>
+                    <p class="text-sm">提前规划课程，把占心仪课程</p>
+                </div>
+                <div class="absolute bottom-4 right-4 flex">
+                    <div class="w-2 h-2 bg-white rounded-full mx-1 opacity-50"></div>
+                    <div class="w-2 h-2 bg-white rounded-full mx-1"></div>
+                    <div class="w-2 h-2 bg-white rounded-full mx-1 opacity-50"></div>
+                </div>
+            </div>
+            
+            <!-- 课程分类 -->
+            <div class="flex justify-between mx-4 mt-6">
+                <div class="bg-blue-500 rounded-lg py-2 px-6 text-white text-center flex-1 flex items-center justify-center mr-2">
+                    <i class="fas fa-graduation-cap mr-2"></i>
+                    <span>专业课程</span>
+                </div>
+                <div class="bg-white border border-gray-300 rounded-lg py-2 px-6 text-gray-700 text-center flex-1 flex items-center justify-center mx-2">
+                    <i class="fas fa-book-open mr-2"></i>
+                    <span>通识课程</span>
+                </div>
+                <div class="bg-white border border-gray-300 rounded-lg py-2 px-6 text-gray-700 text-center flex-1 flex items-center justify-center ml-2">
+                    <i class="fas fa-laptop-code mr-2"></i>
+                    <span>选修课程</span>
+                </div>
+            </div>
+            
+            <!-- 为你推荐 -->
+            <div class="px-4 mt-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-lg font-semibold">为你推荐</h3>
+                    <a href="#" class="text-sm text-blue-500">查看全部</a>
+                </div>
+                <p class="text-gray-500 text-sm mb-4">根据你的学习爱好</p>
+                
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- 推荐课程1 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow">
+                        <img src="https://images.pexels.com/photos/6238048/pexels-photo-6238048.jpeg" class="w-full h-24 object-cover" alt="高等数学">
+                        <div class="p-3">
+                            <h4 class="font-medium">高等数学</h4>
+                            <p class="text-xs text-gray-500">张教授</p>
+                            <div class="flex items-center mt-1">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-yellow-500 font-medium">4.8</span>
+                                <span class="ml-auto text-xs text-gray-400">1234</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 推荐课程2 -->
+                    <div class="bg-white rounded-xl overflow-hidden shadow">
+                        <img src="https://images.pexels.com/photos/6238118/pexels-photo-6238118.jpeg" class="w-full h-24 object-cover" alt="数据结构">
+                        <div class="p-3">
+                            <h4 class="font-medium">数据结构</h4>
+                            <p class="text-xs text-gray-500">李教授</p>
+                            <div class="flex items-center mt-1">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-yellow-500 font-medium">4.9</span>
+                                <span class="ml-auto text-xs text-gray-400">2156</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 最新动态 -->
+            <div class="px-4 mt-6 pb-20">
+                <h3 class="text-lg font-semibold mb-4">最新动态</h3>
+                
+                <div class="bg-white rounded-lg p-3 flex items-center">
+                    <div class="w-8 h-8 bg-blue-100 rounded-md flex items-center justify-center text-blue-500 mr-3">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="flex-1">
+                        <div class="text-sm font-medium">新课程上线</div>
+                        <div class="text-xs text-gray-500">《人工智能导论》课程已开放选课</div>
+                    </div>
+                    <div class="text-xs text-gray-400">10分钟前</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部导航栏 -->
+        <div class="bottom-nav">
+            <div class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>首页</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-th-large"></i>
+                <span>分类</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>活动</span>
+            </div>
+            <div class="nav-item">
+                <i class="far fa-comment"></i>
+                <span>消息</span>
+            </div>
+            <div class="nav-item">
+                <i class="far fa-user"></i>
+                <span>我的</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 加载JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+</body>
+</html>

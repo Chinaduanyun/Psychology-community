@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>搜索</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/interactive.css">
+</head>
+<body class="m-0 p-0">
+    <div class="iphone-frame mx-auto">
+        <!-- 状态栏 -->
+        <div class="status-bar">
+            <div>9:41</div>
+            <div class="flex items-center">
+                <i class="fas fa-signal mr-1"></i>
+                <i class="fas fa-wifi mr-1"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+
+        <!-- 内容区域 -->
+        <div class="content bg-white">
+            <!-- 搜索栏 -->
+            <div class="p-3 border-b border-gray-100 flex items-center">
+                <button class="mr-3">
+                    <i class="fas fa-chevron-left text-gray-500"></i>
+                </button>
+                <div class="flex-1 bg-gray-100 rounded-full flex items-center px-3 py-2">
+                    <i class="fas fa-search text-gray-400 mr-2"></i>
+                    <input type="text" placeholder="搜索课程、评价或活动" class="bg-transparent border-0 outline-none flex-1 text-sm">
+                    <i class="fas fa-microphone text-gray-400 ml-2"></i>
+                </div>
+                <button class="ml-3 text-blue-500 text-sm font-medium">
+                    搜索
+                </button>
+            </div>
+            
+            <!-- 搜索分类 -->
+            <div class="flex justify-around py-3 border-b border-gray-100">
+                <button class="px-4 py-1 bg-gray-900 text-white rounded-full text-sm">全部</button>
+                <button class="px-4 py-1 text-gray-500 text-sm">课程</button>
+                <button class="px-4 py-1 text-gray-500 text-sm">评价</button>
+                <button class="px-4 py-1 text-gray-500 text-sm">活动</button>
+                <button class="px-4 py-1 text-gray-500 text-sm">讲师</button>
+            </div>
+            
+            <!-- 热门搜索 -->
+            <div class="p-4">
+                <h2 class="text-base font-medium mb-3">热门搜索</h2>
+                <div class="flex flex-wrap">
+                    <div class="flex items-center mb-3 mr-4">
+                        <div class="w-5 h-5 bg-red-500 text-white rounded-sm flex items-center justify-center text-xs mr-2">1</div>
+                        <span class="text-sm">Python入门课程</span>
+                    </div>
+                    <div class="flex items-center mb-3 mr-4">
+                        <div class="w-5 h-5 bg-red-500 text-white rounded-sm flex items-center justify-center text-xs mr-2">2</div>
+                        <span class="text-sm">考研英语</span>
+                    </div>
+                    <div class="flex items-center mb-3 mr-4">
+                        <div class="w-5 h-5 bg-red-500 text-white rounded-sm flex items-center justify-center text-xs mr-2">3</div>
+                        <span class="text-sm">UI设计基础</span>
+                    </div>
+                    <div class="flex items-center mb-3 mr-4">
+                        <div class="w-5 h-5 bg-gray-300 text-gray-600 rounded-sm flex items-center justify-center text-xs mr-2">4</div>
+                        <span class="text-sm">考公备考</span>
+                    </div>
+                    <div class="flex items-center mb-3 mr-4">
+                        <div class="w-5 h-5 bg-gray-300 text-gray-600 rounded-sm flex items-center justify-center text-xs mr-2">5</div>
+                        <span class="text-sm">Java高级开发</span>
+                    </div>
+                    <div class="flex items-center mb-3 mr-4">
+                        <div class="w-5 h-5 bg-gray-300 text-gray-600 rounded-sm flex items-center justify-center text-xs mr-2">6</div>
+                        <span class="text-sm">财务管理</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 搜索历史 -->
+            <div class="p-4">
+                <div class="flex justify-between items-center mb-3">
+                    <h2 class="text-base font-medium">搜索历史</h2>
+                    <button class="text-sm text-gray-400">
+                        清空
+                    </button>
+                </div>
+                <div class="divide-y divide-gray-100">
+                    <div class="flex items-center justify-between py-3">
+                        <div class="flex items-center">
+                            <i class="far fa-clock text-gray-400 mr-3"></i>
+                            <span class="text-sm">Web前端开发</span>
+                        </div>
+                        <button class="text-gray-300">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="flex items-center justify-between py-3">
+                        <div class="flex items-center">
+                            <i class="far fa-clock text-gray-400 mr-3"></i>
+                            <span class="text-sm">数据结构与算法</span>
+                        </div>
+                        <button class="text-gray-300">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="flex items-center justify-between py-3">
+                        <div class="flex items-center">
+                            <i class="far fa-clock text-gray-400 mr-3"></i>
+                            <span class="text-sm">产品经理实战</span>
+                        </div>
+                        <button class="text-gray-300">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 为你推荐 -->
+            <div class="p-4 pb-20">
+                <h2 class="text-base font-medium mb-3">为你推荐</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- 课程卡片1 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                        <img src="https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg" class="w-full h-32 object-cover" alt="Python数据分析">
+                        <div class="p-3">
+                            <h3 class="font-medium text-sm">Python数据分析实战</h3>
+                            <p class="text-xs text-gray-500 mt-1">从零开始学习数据分析</p>
+                            <div class="flex justify-between items-center mt-2">
+                                <span class="text-red-500 font-medium">¥299</span>
+                                <span class="text-xs text-gray-400">2345人在学</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 课程卡片2 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                        <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg" class="w-full h-32 object-cover" alt="UI设计">
+                        <div class="p-3">
+                            <h3 class="font-medium text-sm">UI设计入门课程</h3>
+                            <p class="text-xs text-gray-500 mt-1">零基础设计速成班</p>
+                            <div class="flex justify-between items-center mt-2">
+                                <span class="text-red-500 font-medium">¥199</span>
+                                <span class="text-xs text-gray-400">1890人在学</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 课程卡片3 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                        <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg" class="w-full h-32 object-cover" alt="JavaScript编程">
+                        <div class="p-3">
+                            <h3 class="font-medium text-sm">JavaScript高级编程</h3>
+                            <p class="text-xs text-gray-500 mt-1">深入学习JavaScript</p>
+                            <div class="flex justify-between items-center mt-2">
+                                <span class="text-red-500 font-medium">¥399</span>
+                                <span class="text-xs text-gray-400">1245人在学</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 课程卡片4 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm">
+                        <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" class="w-full h-32 object-cover" alt="数据库设计">
+                        <div class="p-3">
+                            <h3 class="font-medium text-sm">数据库设计与实现</h3>
+                            <p class="text-xs text-gray-500 mt-1">数据库核心技能培训</p>
+                            <div class="flex justify-between items-center mt-2">
+                                <span class="text-red-500 font-medium">¥349</span>
+                                <span class="text-xs text-gray-400">965人在学</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部导航栏 -->
+        <div class="bottom-nav">
+            <div class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>首页</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-th-large"></i>
+                <span>分类</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>活动</span>
+            </div>
+            <div class="nav-item">
+                <i class="far fa-comment"></i>
+                <span>消息</span>
+            </div>
+            <div class="nav-item">
+                <i class="far fa-user"></i>
+                <span>我的</span>
+            </div>
+        </div>
+    </div>
+    <!-- 加载JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+</body>
+</html>

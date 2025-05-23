@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>消息中心</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/interactive.css">
+</head>
+<body class="m-0 p-0">
+    <div class="iphone-frame mx-auto">
+        <!-- 状态栏 -->
+        <div class="status-bar">
+            <div>9:41</div>
+            <div class="flex items-center">
+                <i class="fas fa-signal mr-1"></i>
+                <i class="fas fa-wifi mr-1"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+
+        <!-- 内容区域 -->
+        <div class="content bg-white">
+            <!-- 头部 -->
+            <div class="flex items-center px-4 py-3 bg-white border-b border-gray-100">
+                <button class="mr-4">
+                    <i class="fas fa-chevron-left text-gray-500"></i>
+                </button>
+                <h1 class="text-lg font-semibold flex-1">消息中心</h1>
+                <button>
+                    <i class="fas fa-cog text-gray-500"></i>
+                </button>
+            </div>
+            
+            <!-- 消息分类 -->
+            <div class="flex border-b border-gray-200">
+                <button class="flex-1 py-3 text-blue-500 border-b-2 border-blue-500 text-center text-sm font-medium">
+                    全部
+                </button>
+                <button class="flex-1 py-3 text-gray-500 text-center text-sm">
+                    系统通知
+                </button>
+                <button class="flex-1 py-3 text-gray-500 text-center text-sm">
+                    互动通知
+                </button>
+                <button class="flex-1 py-3 text-gray-500 text-center text-sm">
+                    活动通知
+                </button>
+                <button class="flex-1 py-3 text-gray-500 text-center text-sm">
+                    私信
+                </button>
+            </div>
+            
+            <!-- 过滤栏 -->
+            <div class="flex justify-between items-center px-4 py-2 bg-white border-b border-gray-100 text-sm">
+                <div class="text-gray-500">3条未读</div>
+                <div class="flex">
+                    <button class="text-blue-500 mr-4">全部已读</button>
+                    <button class="text-blue-500">清空</button>
+                </div>
+            </div>
+            
+            <!-- 消息列表 -->
+            <div class="p-4">
+                <!-- 消息1：重要通知 -->
+                <div class="bg-yellow-50 p-3 rounded-lg mb-4 relative">
+                    <div class="flex">
+                        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white mr-3">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-medium">重要通知</h3>
+                                <span class="text-xs text-gray-400">10小时前</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-1">系统维护通知：系统将于今晚22:00-24:00进行升级维护，请提前保存好您的工作。</p>
+                        </div>
+                    </div>
+                    <button class="absolute top-2 right-2 text-gray-400">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <!-- 消息2：选课提醒 -->
+                <div class="bg-white p-3 rounded-lg border border-gray-100 mb-4 relative">
+                    <div class="flex">
+                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mr-3">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-medium">选课提醒</h3>
+                                <span class="text-xs text-gray-400">2小时前</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-1">2023年秋季学期选课将于明天开始，请及时登录系统进行选课。</p>
+                        </div>
+                    </div>
+                    <button class="absolute top-2 right-2 text-gray-400">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <!-- 消息3：评论获赞通知 -->
+                <div class="bg-white p-3 rounded-lg border border-gray-100 mb-4 relative">
+                    <div class="flex">
+                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-500 mr-3">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-medium">评论获赞通知</h3>
+                                <span class="text-xs text-gray-400">1天前</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-1">你在《高等数学》课程的评论获得了3个赞</p>
+                        </div>
+                    </div>
+                    <button class="absolute top-2 right-2 text-gray-400">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <!-- 消息4：活动报名成功 -->
+                <div class="bg-white p-3 rounded-lg border border-gray-100 mb-4 relative">
+                    <div class="flex">
+                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-500 mr-3">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-medium">活动报名成功</h3>
+                                <span class="text-xs text-gray-400">3天前</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-1">你已成功报名"2023秋季校园招聘会"</p>
+                        </div>
+                    </div>
+                    <button class="absolute top-2 right-2 text-gray-400">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                
+                <!-- 消息5：私信 -->
+                <div class="bg-white p-3 rounded-lg border border-gray-100 mb-4 relative">
+                    <div class="flex">
+                        <div class="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-500 mr-3">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-medium">新私信</h3>
+                                <span class="text-xs text-gray-400">5天前</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-1">张老师：关于下周的课程安排，请查看附件中的详细说明。</p>
+                        </div>
+                    </div>
+                    <button class="absolute top-2 right-2 text-gray-400">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+    <!-- 加载JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+</body>
+</html>
