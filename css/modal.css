@@ -1,0 +1,44 @@
+/* 模态窗口样式 */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+/* 隐藏的模态窗口 */
+.hidden {
+    display: none !important;
+}
+
+/* 成功模态窗特殊样式 */
+#successModal {
+    display: none;
+}
+
+#successModal.active {
+    display: block;
+}
+
+/* 模态内容的动画 */
+.modal-content {
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+
+.modal-content.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* 避免模态窗的滚动问题 */
+body.modal-open {
+    overflow: hidden;
+}

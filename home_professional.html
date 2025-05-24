@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>专业课程</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/interactive.css">
+    <link rel="stylesheet" href="css/carousel.css">
+</head>
+<body class="m-0 p-0">
+    <div class="iphone-frame mx-auto">
+        <!-- 状态栏 -->
+        <div class="status-bar">
+            <div>9:41</div>
+            <div class="flex items-center">
+                <i class="fas fa-signal mr-1"></i>
+                <i class="fas fa-wifi mr-1"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+
+        <!-- 内容区域 -->
+        <div class="content bg-gray-50">
+            <!-- 顶部导航栏 -->
+            <div class="bg-white p-4 flex justify-between items-center">
+                <a href="home.html" class="flex items-center">
+                    <i class="fas fa-arrow-left text-gray-700 mr-3"></i>
+                    <h1 class="text-lg font-bold">专业课程</h1>
+                </a>
+                <div class="ml-4 flex">
+                    <i class="fas fa-filter text-gray-500 text-xl"></i>
+                    <i class="fas fa-search ml-4 text-gray-500 text-xl"></i>
+                </div>
+            </div>
+
+            <!-- 热门推荐 -->
+            <div class="px-4 mt-2">
+                <h2 class="text-lg font-semibold mb-3">热门推荐</h2>
+                <a href="./course_detail/professional/psychology_introduction.html" class="block">
+                    <div class="bg-white rounded-xl overflow-hidden shadow mb-4">
+                        <img src="https://images.pexels.com/photos/3769021/pexels-photo-3769021.jpeg" class="w-full h-40 object-cover" alt="心理学导论">
+                        <div class="p-4">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-bold text-xl">心理学导论</h3>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">必修课</span>
+                            </div>
+                            <p class="text-gray-600 text-sm mt-2">本课程介绍心理学的基本概念、研究方法和主要理论，是心理学专业学生的入门必修课程。</p>
+                            <div class="mt-3 flex items-center">
+                                <img src="https://randomuser.me/api/portraits/women/12.jpg" class="w-8 h-8 rounded-full mr-2" alt="教授头像">
+                                <div>
+                                    <p class="text-sm font-medium">王教授</p>
+                                    <div class="flex items-center">
+                                        <i class="fas fa-star text-yellow-500 text-xs"></i>
+                                        <i class="fas fa-star text-yellow-500 text-xs"></i>
+                                        <i class="fas fa-star text-yellow-500 text-xs"></i>
+                                        <i class="fas fa-star text-yellow-500 text-xs"></i>
+                                        <i class="fas fa-star-half-alt text-yellow-500 text-xs"></i>
+                                        <span class="text-xs text-gray-500 ml-1">(4.8)</span>
+                                    </div>
+                                </div>
+                                <span class="ml-auto bg-yellow-500 text-white px-3 py-1 rounded-lg text-sm">了解详情</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- 课程列表 -->
+            <div class="px-4 mt-2 pb-20">
+                <h2 class="text-lg font-semibold mb-3">全部课程</h2>
+                
+                <!-- 课程1 -->
+                <a href="./course_detail/professional/experimental_psychology.html" class="bg-white rounded-xl overflow-hidden shadow mb-4 block">
+                    <div class="flex">
+                        <img src="https://images.pexels.com/photos/4101142/pexels-photo-4101142.jpeg" class="w-24 h-24 object-cover" alt="实验心理学">
+                        <div class="p-3 flex-1">
+                            <div class="flex justify-between">
+                                <h3 class="font-medium">实验心理学</h3>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded">必修</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1 line-clamp-2">学习心理学实验设计与科学研究方法，进行实际实验操作。</p>
+                            <div class="flex items-center mt-2">
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <span class="ml-1 text-xs text-yellow-500">4.7</span>
+                                </div>
+                                <span class="text-xs text-gray-400 ml-2">56学时</span>
+                                <span class="text-xs font-medium text-yellow-500 ml-auto">了解详情</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- 课程2 -->
+                <a href="./course_detail/professional/cognitive_neuroscience.html" class="bg-white rounded-xl overflow-hidden shadow mb-4 block">
+                    <div class="flex">
+                        <img src="https://images.pexels.com/photos/8199562/pexels-photo-8199562.jpeg" class="w-24 h-24 object-cover" alt="认知神经科学">
+                        <div class="p-3 flex-1">
+                            <div class="flex justify-between">
+                                <h3 class="font-medium">认知神经科学</h3>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded">必修</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1 line-clamp-2">研究认知过程的神经机制，整合心理学与神经科学知识。</p>
+                            <div class="flex items-center mt-2">
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <span class="ml-1 text-xs text-yellow-500">4.9</span>
+                                </div>
+                                <span class="text-xs text-gray-400 ml-2">48学时</span>
+                                <span class="text-xs font-medium text-yellow-500 ml-auto">了解详情</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- 课程3 -->
+                <a href="./course_detail/professional/abnormal_psychology.html" class="bg-white rounded-xl overflow-hidden shadow mb-4 block">
+                    <div class="flex">
+                        <img src="https://images.pexels.com/photos/4498362/pexels-photo-4498362.jpeg" class="w-24 h-24 object-cover" alt="异常心理学">
+                        <div class="p-3 flex-1">
+                            <div class="flex justify-between">
+                                <h3 class="font-medium">异常心理学</h3>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-0.5 rounded">选修</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1 line-clamp-2">探讨心理障碍的病因、症状、诊断和治疗方法。</p>
+                            <div class="flex items-center mt-2">
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <span class="ml-1 text-xs text-yellow-500">4.5</span>
+                                </div>
+                                <span class="text-xs text-gray-400 ml-2">36学时</span>
+                                <span class="text-xs font-medium text-yellow-500 ml-auto">了解详情</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- 课程4 -->
+                <a href="./course_detail/professional/developmental_psychology.html" class="bg-white rounded-xl overflow-hidden shadow mb-4 block">
+                    <div class="flex">
+                        <img src="https://images.pexels.com/photos/6238118/pexels-photo-6238118.jpeg" class="w-24 h-24 object-cover" alt="发展心理学">
+                        <div class="p-3 flex-1">
+                            <div class="flex justify-between">
+                                <h3 class="font-medium">发展心理学</h3>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded">必修</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1 line-clamp-2">研究人类终身发展过程中的心理变化与发展规律。</p>
+                            <div class="flex items-center mt-2">
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <span class="ml-1 text-xs text-yellow-500">4.8</span>
+                                </div>
+                                <span class="text-xs text-gray-400 ml-2">42学时</span>
+                                <span class="text-xs font-medium text-yellow-500 ml-auto">了解详情</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- 课程5 -->
+                <a href="./course_detail/professional/psychometrics.html" class="bg-white rounded-xl overflow-hidden shadow mb-4 block">
+                    <div class="flex">
+                        <img src="https://images.pexels.com/photos/7869237/pexels-photo-7869237.jpeg" class="w-24 h-24 object-cover" alt="心理测量学">
+                        <div class="p-3 flex-1">
+                            <div class="flex justify-between">
+                                <h3 class="font-medium">心理测量学</h3>
+                                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-0.5 rounded">必修</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1 line-clamp-2">学习心理测验的编制、实施、评分和解释方法。</p>
+                            <div class="flex items-center mt-2">
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <span class="ml-1 text-xs text-yellow-500">4.6</span>
+                                </div>
+                                <span class="text-xs text-gray-400 ml-2">40学时</span>
+                                <span class="text-xs font-medium text-yellow-500 ml-auto">了解详情</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 底部导航栏 -->
+        <div class="bottom-nav">
+            <div class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>首页</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-th-large"></i>
+                <span>分类</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>活动</span>
+            </div>
+            <div class="nav-item">
+                <i class="far fa-comment"></i>
+                <span>消息</span>
+            </div>
+            <div class="nav-item">
+                <i class="far fa-user"></i>
+                <span>我的</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 加载JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+</body>
+</html>

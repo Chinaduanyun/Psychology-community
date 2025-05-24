@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 添加发布按钮事件
     initPublishAction();
+    
+    // 初始化匿名发布开关
+    initAnonymousToggle();
 });
 
 /**
@@ -259,7 +262,7 @@ function initTextareaCounter() {
 function updateCharCount(textarea, counter, counterContainer, minCountNotice) {
     const count = textarea.value.length;
     const maxCount = 500;
-    const minCount = 50;
+    const minCount = 5;
     
     // 更新计数
     counter.textContent = count;
@@ -290,14 +293,19 @@ function initPublishAction() {
         publishBtn.addEventListener('click', function() {
             // 验证表单
             if (validateForm()) {
+                // 获取匿名状态
+                const isAnonymous = getAnonymousStatus();
+                const publishMessage = isAnonymous ? '匿名评价发布成功' : '评价发布成功';
+                
                 // 显示成功提示
-                showFeedback('评价发布成功', 'success');
+                showFeedback(publishMessage, 'success');
                 
                 // 模拟跳转回上一页
                 setTimeout(() => {
-                    // 这里应该是实际的跳转逻辑，例如 window.location.href = 'course_detail.html'
+                    // 这里应该是实际的跳转逻辑，例如 window.location.href = './course_detail/course_detail.html'
+                        window.location.href = './course_detail/course_detail.html'; // 跳转到课程详情页
                     showFeedback('返回上一页', 'info');
-                }, 2000);
+                }, 500);
             }
         });
     }
@@ -404,6 +412,90 @@ function showFeedback(message, type) {
             }
         }, 300);
     }, 3000);
+}
+
+/**
+ * 初始化匿名发布开关
+ */
+function initAnonymousToggle() {
+    const anonymousToggle = document.getElementById('anonymous-toggle');
+    const toggleBg = document.getElementById('anonymous-toggle-bg');
+    
+    if (anonymousToggle && toggleBg) {
+        // 监听开关变化
+        anonymousToggle.addEventListener('change', function() {
+            const isAnonymous = this.checked;
+            
+            if (isAnonymous) {
+                // 更改背景颜色为蓝色
+                toggleBg.classList.remove('bg-gray-200');
+                toggleBg.classList.add('bg-blue-600');
+                // 将小圆点移到右侧
+                toggleBg.classList.add('after:translate-x-5');
+            } else {
+                // 恢复背景颜色为灰色
+                toggleBg.classList.remove('bg-blue-600');
+                toggleBg.classList.add('bg-gray-200');
+                // 将小圆点移回左侧
+                toggleBg.classList.remove('after:translate-x-5');
+            }
+            
+            // 保存匿名状态到隐藏字段
+            let anonymousField = document.querySelector('input[name="anonymous"]');
+            if (!anonymousField) {
+                anonymousField = document.createElement('input');
+                anonymousField.type = 'hidden';
+                anonymousField.name = 'anonymous';
+                document.body.appendChild(anonymousField);
+            }
+            anonymousField.value = isAnonymous ? '1' : '0';
+            
+            // 显示状态反馈
+            const feedbackMessage = isAnonymous ? '已开启匿名发布' : '已关闭匿名发布';
+            showAnonymousFeedback(feedbackMessage, isAnonymous);
+        });
+    }
+}
+
+/**
+ * 显示匿名开关反馈
+ */
+function showAnonymousFeedback(message, isAnonymous) {
+    // 移除旧的反馈
+    const oldFeedback = document.querySelector('.anonymous-feedback');
+    if (oldFeedback) {
+        oldFeedback.parentNode.removeChild(oldFeedback);
+    }
+    
+    // 创建反馈元素
+    const feedback = document.createElement('div');
+    feedback.className = 'anonymous-feedback text-xs mt-2 animation-fade-in';
+    feedback.classList.add(isAnonymous ? 'text-blue-500' : 'text-gray-500');
+    feedback.textContent = message;
+    
+    // 找到匿名开关的容器
+    const toggleContainer = document.querySelector('#anonymous-toggle').closest('.bg-white.p-4.mb-2');
+    if (toggleContainer) {
+        toggleContainer.appendChild(feedback);
+        
+        // 3秒后淡出
+        setTimeout(() => {
+            feedback.style.opacity = '0';
+            setTimeout(() => {
+                if (feedback.parentNode) {
+                    feedback.parentNode.removeChild(feedback);
+                }
+            }, 300);
+        }, 3000);
+    }
+}
+
+/**
+ * 获取是否匿名发布
+ */
+function getAnonymousStatus() {
+    const anonymousField = document.querySelector('input[name="anonymous"]');
+    return anonymousField ? anonymousField.value === '1' : false;
 }
 
 // CSS 样式补充

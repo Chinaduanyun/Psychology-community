@@ -23,8 +23,8 @@
 
         <!-- 内容区域 -->
         <div class="content bg-gray-50">
-            <!-- 头部导航栏 -->
-            <div class="flex items-center px-4 py-3 bg-white">
+            <!-- 头部导航栏 - 固定在内容区域顶部 -->
+            <div class="flex items-center px-4 py-3 bg-white sticky top-0 z-50 shadow-sm">
                 <button class="text-blue-500 back-button">
                     <i class="fas fa-chevron-left text-xl"></i>
                 </button>
@@ -34,15 +34,7 @@
                 </button>
             </div>
             
-            <!-- 课程信息 -->
-            <div class="p-4 bg-white mb-2">
-                <h2 class="text-lg font-semibold mb-2">数据结构与算法</h2>
-                <div class="flex items-center">
-                    <div class="text-sm text-gray-600">授课教师：张教授</div>
-                    <div class="mx-2 text-gray-300">|</div>
-                    <div class="text-sm text-gray-600">开课学期：2023-2024学年第一学期</div>
-                </div>
-            </div>
+
             
             <!-- 评价表单 -->
             <div class="bg-white p-4 mb-2">
@@ -100,10 +92,24 @@
             <!-- 课程评价 -->
             <div class="bg-white p-4 mb-2">
                 <h3 class="font-medium mb-3">课程评价</h3>
-                <textarea class="w-full border border-gray-200 rounded-md p-3 text-sm" rows="6" placeholder="请详细描述你的课程体验（最少50字）" maxlength="500"></textarea>
+                <textarea class="w-full border border-gray-200 rounded-md p-3 text-sm" rows="6" placeholder="请详细描述你的课程体验（最少5字）" maxlength="500"></textarea>
                 <div class="text-right text-xs text-gray-400 mt-1">
                     <span class="char-count">0</span>/500
-                    <span class="text-xs text-yellow-500 ml-1">(最少50字)</span>
+                    <span class="text-xs text-yellow-500 ml-1">(最少5字)</span>
+                </div>
+            </div>
+            
+            <!-- 匿名发布选项 -->
+            <div class="bg-white p-4 mb-2">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h3 class="font-medium">匿名发布</h3>
+                        <p class="text-xs text-gray-500 mt-1">开启后，其他人将无法看到您的身份信息</p>
+                    </div>
+                    <label class="relative inline-flex items-center cursor-pointer">
+                        <input type="checkbox" class="sr-only peer" id="anonymous-toggle">
+                        <div id="anonymous-toggle-bg" class="w-11 h-6 bg-gray-200 rounded-full relative after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+                    </label>
                 </div>
             </div>
             

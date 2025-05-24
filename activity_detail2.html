@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>活动详情 - 计算机专业选课分享会</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/interactive.css"> -->
+    <!-- <link rel="stylesheet" href="css/modal.css"> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            padding-bottom: 80px; /* 为固定页脚留出空间 */
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .activity-header h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .activity-meta p {
+            font-size: 14px;
+            color: #666;
+            margin: 5px 0;
+        }
+        .activity-meta .price {
+            color: red;
+            font-weight: bold;
+        }
+        .registration-info {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #e9f5ff;
+            border-left: 3px solid #007bff;
+        }
+        .registration-info .count {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+        .registration-info .new-signups {
+            font-size: 14px;
+            color: #28a745;
+            margin-left: 10px;
+        }
+        .section-title {
+            font-size: 18px;
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+        .activity-content ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .activity-content li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        .location-map {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .location-map .map-placeholder {
+            width: 100%;
+            height: 150px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-style: italic;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .organizer-info {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+        .organizer-avatar {
+            width: 50px;
+            height: 50px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #555;
+        }
+        .organizer-details p {
+            margin: 0;
+            font-size: 14px;
+        }
+        .organizer-details .name {
+            font-weight: bold;
+            color: #333;
+        }
+        .organizer-details .stats {
+            font-size: 12px;
+            color: #777;
+        }
+        .follow-button {
+            margin-left: auto;
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .follow-button:hover {
+            background-color: #0056b3;
+        }
+        .fixed-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            border-top: 1px solid #ddd;
+            padding: 10px 15px;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+        .footer-info {
+            font-size: 14px;
+            color: #333;
+        }
+        .footer-info .price-free {
+            color: red;
+            font-weight: bold;
+        }
+        .footer-info .spots-left {
+            margin-left: 10px;
+            color: #ff7e00;
+        }
+        .register-button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .register-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="activity-header">
+            <h1>计算机专业选课分享会</h1>
+        </div>
+
+        <div class="activity-meta">
+            <p><span class="price">免费</span></p>
+            <p>报名截止: 2025-05-25</p>
+            <p>时间: 2025年5月28日 14:00-16:00</p>
+            <p>地点: 教学楼A301</p>
+            <p>主讲人: 张教授</p>
+        </div>
+
+        <div class="registration-info">
+            <span class="count">报名人数 45/60 人</span>
+            <span class="new-signups">+42</span>
+        </div>
+
+        <div class="section-title">活动介绍</div>
+        <div class="activity-content">
+            <p>本次活动将邀请计算机专业的优秀教师和高年级学长学姐分享选课经验和心得。内容包括：</p>
+            <ul>
+                <li>核心课程难度分析与学习建议</li>
+                <li>选修课推荐与避坑指南</li>
+                <li>不同方向课程组合推荐</li>
+                <li>学习资源与备考技巧分享</li>
+            </ul>
+            <p>通过本次活动，希望能帮助同学们更好地规划自己的课程，提高学习效率，取得更好的成绩。欢迎所有对计算机专业课程感兴趣的同学参加！</p>
+        </div>
+
+        <div class="section-title">活动地点</div>
+        <div class="location-map">
+            <div class="map-placeholder">地图</div>
+            <p>教学楼A301</p>
+        </div>
+
+        <div class="section-title">活动组织者</div>
+        <div class="organizer-info">
+            <div class="organizer-avatar">头像</div>
+            <div class="organizer-details">
+                <p class="name">计算机科学与技术学院</p>
+                <p class="stats">已组织35场活动</p>
+            </div>
+            <button class="follow-button" onclick="followOrganizer()">关注</button>
+        </div>
+    </div>
+
+    <div class="fixed-footer">
+        <div class="footer-info">
+            <span class="price-free">活动免费</span>
+            <span class="spots-left">仅剩15个名额</span>
+        </div>
+        <button class="register-button" onclick="registerForActivity()">立即报名</button>
+    </div>
+
+    <script>
+        function registerForActivity() {
+            // 实际的报名逻辑会在这里实现
+            // 例如，可以弹出一个确认框，或者跳转到报名页面，或者发送一个API请求
+            alert("您已点击“立即报名”！报名功能正在开发中。");
+            // 示例：更新按钮状态或显示消息
+            const button = document.querySelector('.register-button');
+            button.textContent = '已报名';
+            button.disabled = true;
+            
+            // 可以在这里添加更复杂的逻辑，比如检查名额是否已满
+            // const spotsLeftElement = document.querySelector('.spots-left');
+            // let currentSpots = parseInt(spotsLeftElement.textContent.match(/\d+/)[0]);
+            // if (currentSpots > 0) {
+            //     currentSpots--;
+            //     spotsLeftElement.textContent = '仅剩' + currentSpots + '个名额';
+            //     if (currentSpots === 0) {
+            //        spotsLeftElement.textContent = '名额已满';
+            //        button.style.backgroundColor = 'grey';
+            //     }
+            // } else {
+            //     alert('抱歉，名额已满！');
+            //     button.disabled = true;
+            //     button.style.backgroundColor = 'grey';
+            // }
+        }
+
+        function followOrganizer() {
+            alert("您已点击“关注”！关注功能正在开发中。");
+            const followButton = document.querySelector('.follow-button');
+            followButton.textContent = '已关注';
+            followButton.disabled = true;
+            // 实际的关注逻辑
+        }
+    </script>
+    <!-- 如果有共用的js文件，可以在这里引入 -->
+    <!-- <script src="js/main.js"></script> -->
+    <!-- <script src="js/activity.js"></script> -->
+</body>
+</html>

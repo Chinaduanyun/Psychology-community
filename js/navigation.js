@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     navItems.forEach((item, index) => {
         item.addEventListener('click', function() {
             // 获取要导航到的页面
-            const pages = ['index.html', 'courses.html', 'activities.html', 'messages.html', 'profile.html'];
+            const pages = ['home.html', 'courses.html', 'activities.html', 'messages.html', 'profile.html'];
             if (pages[index]) {
                 // 清除所有active类
                 navItems.forEach(i => i.classList.remove('active'));
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const courseCards = document.querySelectorAll('.bg-white.rounded-xl.overflow-hidden.shadow, .bg-white.rounded-lg.overflow-hidden.mb-4');
     courseCards.forEach(card => {
         card.addEventListener('click', function() {
-            handleNavigation('course_detail.html');
+            handleNavigation('./course_detail/course_detail.html');
         });
     });
 

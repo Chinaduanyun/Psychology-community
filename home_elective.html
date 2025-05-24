@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>选修课程</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/interactive.css">
+    <link rel="stylesheet" href="css/carousel.css">
+</head>
+<body class="m-0 p-0">
+    <div class="iphone-frame mx-auto">
+        <!-- 状态栏 -->
+        <div class="status-bar">
+            <div>9:41</div>
+            <div class="flex items-center">
+                <i class="fas fa-signal mr-1"></i>
+                <i class="fas fa-wifi mr-1"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+
+        <!-- 内容区域 -->
+        <div class="content bg-gray-50">
+            <!-- 顶部导航栏 -->
+            <div class="bg-white p-4 flex justify-between items-center">
+                <a href="home.html" class="flex items-center">
+                    <i class="fas fa-arrow-left text-gray-700 mr-3"></i>
+                    <h1 class="text-lg font-bold">选修课程</h1>
+                </a>
+                <div class="ml-4 flex">
+                    <i class="fas fa-filter text-gray-500 text-xl"></i>
+                    <i class="fas fa-search ml-4 text-gray-500 text-xl"></i>
+                </div>
+            </div>
+
+
+            <!-- 热门推荐 -->
+            <div class="px-4 mt-2">
+                <h2 class="text-lg font-semibold mb-3">热门推荐</h2>
+                <div class="bg-white rounded-xl overflow-hidden shadow mb-4">
+                    <img src="https://images.pexels.com/photos/177598/pexels-photo-177598.jpeg" class="w-full h-40 object-cover" alt="Python数据分析">
+                    <div class="p-4">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-xl">Python数据分析</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">热门选修</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mt-2">使用Python进行数据处理、分析和可视化，应用于心理学研究和实验数据分析。</p>
+                        <div class="mt-3 flex items-center">
+                            <img src="https://randomuser.me/api/portraits/men/55.jpg" class="w-8 h-8 rounded-full mr-2" alt="教授头像">
+                            <div>
+                                <p class="text-sm font-medium">张教授</p>
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-500 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-500 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-500 text-xs"></i>
+                                    <i class="fas fa-star text-yellow-500 text-xs"></i>
+                                    <i class="fas fa-star-half-alt text-yellow-500 text-xs"></i>
+                                    <span class="text-xs text-gray-500 ml-1">(4.7)</span>
+                                </div>
+                            </div>
+                            <button class="ml-auto bg-green-500 text-white px-3 py-1 rounded-lg text-sm">报名</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 课程列表 -->
+            <div class="px-4 mt-2 pb-20">
+                <h2 class="text-lg font-semibold mb-3">全部课程</h2>
+                
+                <!-- 课程1 -->
+                <a href="./course_detail/course_detail.html" class="bg-white rounded-xl overflow-hidden shadow mb-4 block">
+                    <div class="flex">
+                        <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" class="w-24 h-24 object-cover" alt="R语言统计分析">
+                        <div class="p-3 flex-1">
+                            <div class="flex justify-between">
+                                <h3 class="font-medium">R语言统计分析</h3>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-0.5 rounded">选修</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1 line-clamp-2">R语言在心理学统计分析中的应用，包括数据处理、统计检验和结果可视化。</p>
+                            <div class="flex items-center mt-2">
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <span class="ml-1 text-xs text-yellow-500">4.8</span>
+                                </div>
+                                <span class="text-xs text-gray-400 ml-2">32学时</span>
+                                <span class="text-xs font-medium text-green-500 ml-auto">了解详情</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- 课程2 -->
+                <a href="./course_detail/course_detail.html" class="bg-white rounded-xl overflow-hidden shadow mb-4 block">
+                    <div class="flex">
+                        <img src="https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg" class="w-24 h-24 object-cover" alt="网页设计基础">
+                        <div class="p-3 flex-1">
+                            <div class="flex justify-between">
+                                <h3 class="font-medium">网页设计基础</h3>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-0.5 rounded">选修</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1 line-clamp-2">学习HTML、CSS和JavaScript基础，开发交互式心理测试网页。</p>
+                            <div class="flex items-center mt-2">
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <span class="ml-1 text-xs text-yellow-500">4.5</span>
+                                </div>
+                                <span class="text-xs text-gray-400 ml-2">36学时</span>
+                                <span class="text-xs font-medium text-green-500 ml-auto">了解详情</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- 课程3 -->
+                <a href="./course_detail/course_detail.html" class="bg-white rounded-xl overflow-hidden shadow mb-4 block">
+                    <div class="flex">
+                        <img src="https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg" class="w-24 h-24 object-cover" alt="职业生涯规划">
+                        <div class="p-3 flex-1">
+                            <div class="flex justify-between">
+                                <h3 class="font-medium">职业生涯规划</h3>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-0.5 rounded">选修</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1 line-clamp-2">帮助学生规划职业路径、提升就业竞争力、明确职业方向。</p>
+                            <div class="flex items-center mt-2">
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <span class="ml-1 text-xs text-yellow-500">4.9</span>
+                                </div>
+                                <span class="text-xs text-gray-400 ml-2">24学时</span>
+                                <span class="text-xs font-medium text-green-500 ml-auto">了解详情</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- 课程4 -->
+                <a href="./course_detail/course_detail.html" class="bg-white rounded-xl overflow-hidden shadow mb-4 block">
+                    <div class="flex">
+                        <img src="https://images.pexels.com/photos/533444/pexels-photo-533444.jpeg" class="w-24 h-24 object-cover" alt="心理咨询实务">
+                        <div class="p-3 flex-1">
+                            <div class="flex justify-between">
+                                <h3 class="font-medium">心理咨询实务</h3>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-0.5 rounded">选修</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1 line-clamp-2">心理咨询的基本技能、伦理和实践操作，包含案例分析和模拟演练。</p>
+                            <div class="flex items-center mt-2">
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <span class="ml-1 text-xs text-yellow-500">4.7</span>
+                                </div>
+                                <span class="text-xs text-gray-400 ml-2">42学时</span>
+                                <span class="text-xs font-medium text-green-500 ml-auto">了解详情</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- 课程5 -->
+                <a href="./course_detail/course_detail.html" class="bg-white rounded-xl overflow-hidden shadow mb-4 block">
+                    <div class="flex">
+                        <img src="https://images.pexels.com/photos/7014337/pexels-photo-7014337.jpeg" class="w-24 h-24 object-cover" alt="创新创业基础">
+                        <div class="p-3 flex-1">
+                            <div class="flex justify-between">
+                                <h3 class="font-medium">创新创业基础</h3>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-0.5 rounded">选修</span>
+                            </div>
+                            <p class="text-xs text-gray-500 mt-1 line-clamp-2">培养创新思维和创业能力，学习商业模式构建和项目管理基础。</p>
+                            <div class="flex items-center mt-2">
+                                <div class="flex items-center">
+                                    <i class="fas fa-star text-yellow-400 text-xs"></i>
+                                    <span class="ml-1 text-xs text-yellow-500">4.6</span>
+                                </div>
+                                <span class="text-xs text-gray-400 ml-2">30学时</span>
+                                <span class="text-xs font-medium text-green-500 ml-auto">了解详情</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 底部导航栏 -->
+        <div class="bottom-nav">
+            <div class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>首页</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-th-large"></i>
+                <span>分类</span>
+            </div>
+            <div class="nav-item">
+                <i class="fas fa-calendar-alt"></i>
+                <span>活动</span>
+            </div>
+            <div class="nav-item">
+                <i class="far fa-comment"></i>
+                <span>消息</span>
+            </div>
+            <div class="nav-item">
+                <i class="far fa-user"></i>
+                <span>我的</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 加载JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
+</body>
+</html>

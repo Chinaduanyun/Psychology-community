@@ -27,39 +27,25 @@
             <div class="flex items-center justify-between px-4 py-3 bg-white border-b border-gray-200">
                 <h1 class="text-lg font-semibold">消息</h1>
                 <div class="flex">
-                    <button class="mr-4">
-                        <i class="fas fa-search text-gray-500"></i>
-                    </button>
-                    <button>
-                        <i class="fas fa-edit text-gray-500"></i>
-                    </button>
                 </div>
             </div>
             
             <!-- 消息分类 -->
             <div class="bg-white px-2 py-3">
                 <div class="flex">
-                    <button class="px-3 py-1 text-blue-500 font-medium">
-                        全部
-                    </button>
-                    <button class="px-3 py-1 text-gray-500">
-                        学长学姐
-                    </button>
-                    <button class="px-3 py-1 text-gray-500">
-                        同学
-                    </button>
-                    <button class="px-3 py-1 text-gray-500">
-                        匿名咨询
-                    </button>
+                    <button class="px-3 py-1 text-blue-500 font-medium filter-btn" data-filter="all">全部</button>
+                    <button class="px-3 py-1 text-gray-500 filter-btn" data-filter="senior">学长学姐</button>
+                    <button class="px-3 py-1 text-gray-500 filter-btn" data-filter="classmate">同学</button>
+                    <button class="px-3 py-1 text-gray-500 filter-btn" data-filter="anonymous">匿名咨询</button>
                 </div>
             </div>
             
             <!-- 消息列表 -->
-            <div class="bg-white mt-2">
+            <div class="bg-white mt-2" id="messageList">
                 <!-- 消息项1 -->
-                <div class="flex p-4 border-b border-gray-100">
+                <div class="flex p-4 border-b border-gray-100 message-item" data-type="senior" onclick="window.location.href='message_detail/message_detail1.html'">
                     <div class="relative mr-3">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full" alt="王学长">
+                        <img src="https://randomuser.me/api/portraits/men/12.jpg" class="w-12 h-12 rounded-full" alt="王学长">
                     </div>
                     <div class="flex-1">
                         <div class="flex justify-between items-center">
@@ -74,9 +60,9 @@
                 </div>
                 
                 <!-- 消息项2 -->
-                <div class="flex p-4 border-b border-gray-100">
+                <div class="flex p-4 border-b border-gray-100 message-item" data-type="senior" onclick="window.location.href='message_detail/message_detail2.html'">
                     <div class="relative mr-3">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full" alt="李学姐">
+                        <img src="https://randomuser.me/api/portraits/women/41.jpg" class="w-12 h-12 rounded-full" alt="李学姐">
                     </div>
                     <div class="flex-1">
                         <div class="flex justify-between items-center">
@@ -90,7 +76,7 @@
                 </div>
                 
                 <!-- 消息项3 -->
-                <div class="flex p-4 border-b border-gray-100 bg-gray-50">
+                <div class="flex p-4 border-b border-gray-100 bg-gray-50 message-item" data-type="classmate" onclick="window.location.href='message_detail/message_detail3.html'">
                     <div class="relative mr-3">
                         <img src="https://randomuser.me/api/portraits/men/67.jpg" class="w-12 h-12 rounded-full" alt="张同学">
                     </div>
@@ -106,7 +92,7 @@
                 </div>
                 
                 <!-- 消息项4 -->
-                <div class="flex p-4 border-b border-gray-100 bg-gray-50">
+                <div class="flex p-4 border-b border-gray-100 bg-gray-50 message-item" data-type="anonymous" onclick="window.location.href='message_detail/message_detail4.html'">
                     <div class="relative mr-3">
                         <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
                             <i class="fas fa-user-circle text-2xl"></i>
@@ -120,6 +106,52 @@
                         <div class="flex justify-between items-center mt-1">
                             <p class="text-sm text-gray-500 truncate flex-1">关于考研咨询的问题想请教一下</p>
                             <div class="w-5 h-5 rounded-full bg-red-500 flex items-center justify-center text-white text-xs ml-2">1</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 新增更多消息项... -->
+                <div class="flex p-4 border-b border-gray-100 message-item" data-type="classmate" onclick="window.location.href='message_detail/message_detail5.html'">
+                    <div class="relative mr-3">
+                        <img src="https://randomuser.me/api/portraits/men/88.jpg" class="w-12 h-12 rounded-full" alt="李同学">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-medium">李同学</h3>
+                            <span class="text-xs text-gray-400">09:20</span>
+                        </div>
+                        <div class="flex justify-between items-center mt-1">
+                            <p class="text-sm text-gray-500 truncate flex-1">下节课一起复习吗？</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex p-4 border-b border-gray-100 message-item" data-type="senior" onclick="window.location.href='message_detail/message_detail6.html'">
+                    <div class="relative mr-3">
+                        <img src="https://randomuser.me/api/portraits/men/99.jpg" class="w-12 h-12 rounded-full" alt="赵学长">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-medium">赵学长</h3>
+                            <span class="text-xs text-gray-400">前天</span>
+                        </div>
+                        <div class="flex justify-between items-center mt-1">
+                            <p class="text-sm text-gray-500 truncate flex-1">有问题随时问我！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex p-4 border-b border-gray-100 message-item" data-type="anonymous" onclick="window.location.href='message_detail/message_detail7.html'">
+                    <div class="relative mr-3">
+                        <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                            <i class="fas fa-user-circle text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-medium">匿名用户</h3>
+                            <span class="text-xs text-gray-400">08:10</span>
+                        </div>
+                        <div class="flex justify-between items-center mt-1">
+                            <p class="text-sm text-gray-500 truncate flex-1">心理压力大怎么办？</p>
                         </div>
                     </div>
                 </div>
@@ -196,5 +228,28 @@
     <!-- 加载JavaScript -->
     <script src="js/main.js"></script>
     <script src="js/navigation.js"></script>
+    <script>
+    // 消息筛选功能（直接加在messages.html底部即可，无需依赖外部js）
+    document.addEventListener('DOMContentLoaded', function() {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const messageItems = document.querySelectorAll('.message-item');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                filterBtns.forEach(b => b.classList.remove('text-blue-500', 'font-medium'));
+                filterBtns.forEach(b => b.classList.add('text-gray-500'));
+                this.classList.add('text-blue-500', 'font-medium');
+                this.classList.remove('text-gray-500');
+                const type = this.getAttribute('data-filter');
+                messageItems.forEach(item => {
+                    if (type === 'all' || item.getAttribute('data-type') === type) {
+                        item.style.display = '';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+    </script>
 </body>
 </html>

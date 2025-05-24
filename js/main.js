@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             if (successNotice.parentNode) {
                                 successNotice.parentNode.removeChild(successNotice);
                             }
-                            handleNavigation('course_detail.html');
+                            handleNavigation('./course_detail/course_detail.html');
                         }, 2000);
                     }
                 });
@@ -599,7 +599,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     setTimeout(() => {
                         this.classList.remove('transform', 'scale-95');
                         // 导航到课程详情
-                        handleNavigation('course_detail.html');
+                        handleNavigation('./course_detail/course_detail.html');
                     }, 200);
                 });
             }
@@ -835,8 +835,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     const currentPath = window.location.pathname;
                     
                     if (currentPath.includes('course_review.html')) {
-                        handleNavigation('course_detail.html');
-                    } else if (currentPath.includes('course_detail.html')) {
+                        handleNavigation('./course_detail/course_detail.html');
+                    } else if (currentPath.includes('./course_detail/course_detail.html')) {
                         handleNavigation('courses.html');
                     } else if (currentPath.includes('message_center.html')) {
                         handleNavigation('messages.html');
@@ -922,6 +922,26 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     setupSearch();
+    
+    // 消息筛选功能
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const messageItems = document.querySelectorAll('.message-item');
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            filterBtns.forEach(b => b.classList.remove('text-blue-500', 'font-medium'));
+            filterBtns.forEach(b => b.classList.add('text-gray-500'));
+            this.classList.add('text-blue-500', 'font-medium');
+            this.classList.remove('text-gray-500');
+            const type = this.getAttribute('data-filter');
+            messageItems.forEach(item => {
+                if (type === 'all' || item.getAttribute('data-type') === type) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
     
     // 注意：课程筛选功能已移至 filters.js 文件中
 });

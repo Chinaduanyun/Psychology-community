@@ -1,0 +1,46 @@
+<!-- 私聊详情4：匿名用户 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>匿名用户 - 私聊详情</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/interactive.css">
+</head>
+<body class="bg-gray-50">
+    <div class="iphone-frame mx-auto">
+        <div class="status-bar">
+            <div>9:41</div>
+            <div class="flex items-center">
+                <i class="fas fa-signal mr-1"></i>
+                <i class="fas fa-wifi mr-1"></i>
+                <i class="fas fa-battery-full"></i>
+            </div>
+        </div>
+        <div class="content bg-gray-50 flex flex-col h-screen">
+            <div class="flex items-center px-4 py-3 bg-white border-b border-gray-200">
+                <button onclick="window.history.back()" class="mr-4"><i class="fas fa-chevron-left text-gray-500"></i></button>
+                <h1 class="text-lg font-semibold flex-1" id="chatUser">匿名用户</h1>
+            </div>
+            <div class="flex-1 overflow-y-auto px-4 py-2" id="chatContent">
+                <div class="flex mb-4">
+                    <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 mr-2">
+                        <i class="fas fa-user-circle text-xl"></i>
+                    </div>
+                    <div class="bg-white rounded-lg px-4 py-2 shadow text-sm">关于考研咨询的问题想请教一下</div>
+                </div>
+                <div class="flex mb-4 justify-end">
+                    <div class="bg-blue-500 text-white rounded-lg px-4 py-2 shadow text-sm">可以，欢迎提问！</div>
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-8 h-8 rounded-full ml-2" alt="我的头像">
+                </div>
+            </div>
+            <div class="bg-white px-4 py-2 flex items-center border-t border-gray-200">
+                <input type="text" class="flex-1 border border-gray-200 rounded-full px-4 py-2 text-sm mr-2" placeholder="输入内容...">
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-full">发送</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

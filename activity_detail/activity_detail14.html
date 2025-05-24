@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>活动详情</title>
+    <title>心理协会迎新交流会</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/interactive.css">
-    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/interactive.css">
+    <link rel="stylesheet" href="../css/modal.css">
 </head>
 <body class="m-0 p-0">
     <div class="iphone-frame mx-auto">
-        <!-- 状态栏 -->
         <div class="status-bar">
             <div>9:41</div>
             <div class="flex items-center">
@@ -21,89 +20,68 @@
                 <i class="fas fa-battery-full"></i>
             </div>
         </div>
-
-        <!-- 内容区域 -->
         <div class="content bg-gray-50 pb-28" style="height: calc(100% - 44px); position: relative;">
-            <!-- 头部图片区域 -->
             <div class="relative">
-                <img src="https://images.pexels.com/photos/7096/people-woman-coffee-meeting.jpg" class="w-full h-56 object-cover" alt="活动封面" id="activityCover">
-                
-                <!-- 返回按钮 -->
+                <img src="https://images.pexels.com/photos/256401/pexels-photo-256401.jpeg" class="w-full h-56 object-cover" alt="活动封面">
                 <button id="backButton" class="absolute top-4 left-4 w-8 h-8 bg-black bg-opacity-50 rounded-full flex items-center justify-center">
                     <i class="fas fa-chevron-left text-white"></i>
                 </button>
-                
-                <!-- 分享按钮 -->
                 <button class="absolute top-4 right-4 w-8 h-8 bg-black bg-opacity-50 rounded-full flex items-center justify-center">
                     <i class="fas fa-share-alt text-white"></i>
                 </button>
-                
-                <!-- 活动类型标签 -->
-                <div class="absolute top-4 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-blue-500 text-white text-xs rounded-full" id="activityType">
-                    考研经验
+                <div class="absolute top-4 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-yellow-500 text-white text-xs rounded-full">
+                    社团活动
                 </div>
             </div>
-            
-            <!-- 活动标题和详情 -->
             <div class="p-4 bg-white mb-3">
-                <h1 class="text-xl font-bold mb-2" id="activityTitle">计算机专业选课分享会</h1>
-                
+                <h1 class="text-xl font-bold mb-2">心理协会迎新交流会</h1>
                 <div class="flex items-center mb-3">
                     <span class="text-blue-500 font-medium text-sm mr-2">免费</span>
-                    <span class="text-xs text-gray-500">报名截止: 2025-05-25</span>
+                    <span class="text-xs text-gray-500">报名截止: 2024-06-26</span>
                 </div>
-                
                 <div class="flex flex-col space-y-2">
                     <div class="flex items-center">
                         <i class="far fa-clock text-gray-400 w-5"></i>
-                        <span class="text-sm text-gray-600 ml-2" id="activityTime">2025年5月28日 14:00-16:00</span>
+                        <span class="text-sm text-gray-600 ml-2">2024-06-27 18:00</span>
                     </div>
                     <div class="flex items-center">
                         <i class="fas fa-map-marker-alt text-gray-400 w-5"></i>
-                        <span class="text-sm text-gray-600 ml-2" id="activityLocation">教学楼A301</span>
+                        <span class="text-sm text-gray-600 ml-2">心理协会活动室</span>
                     </div>
                     <div class="flex items-center">
                         <i class="far fa-user text-gray-400 w-5"></i>
-                        <span class="text-sm text-gray-600 ml-2" id="activitySpeaker">主讲人: 张教授</span>
+                        <span class="text-sm text-gray-600 ml-2">主办方: 心理协会</span>
                     </div>
                 </div>
             </div>
-            
-            <!-- 报名人数 -->
             <div class="p-4 bg-white mb-3">
                 <div class="flex justify-between items-center mb-2">
                     <h2 class="text-base font-medium">报名人数</h2>
-                    <span class="text-sm text-gray-500" id="enrollCount">45/60 人</span>
+                    <span class="text-sm text-gray-500">18/40 人</span>
                 </div>
                 <div class="w-full bg-gray-200 rounded-full h-2">
-                    <div class="bg-blue-500 h-2 rounded-full" style="width: 75%" id="progressBar"></div>
+                    <div class="bg-blue-500 h-2 rounded-full" style="width: 45%"></div>
                 </div>
                 <div class="flex mt-3">
                     <div class="flex -space-x-2 overflow-hidden">
                         <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="">
                         <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg" alt="">
                         <img class="inline-block h-6 w-6 rounded-full ring-2 ring-white" src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg" alt="">
-                        <div class="inline-block h-6 w-6 rounded-full ring-2 ring-white bg-gray-300 flex items-center justify-center text-xs text-gray-500">+42</div>
+                        <div class="inline-block h-6 w-6 rounded-full ring-2 ring-white bg-gray-300 flex items-center justify-center text-xs text-gray-500">+15</div>
                     </div>
                 </div>
             </div>
-            
-            <!-- 活动介绍 -->
             <div class="p-4 bg-white mb-3">
                 <h2 class="text-base font-medium mb-2">活动介绍</h2>
-                <p class="text-sm text-gray-600 leading-relaxed" id="activityDescription">
-                    本次活动将邀请计算机专业的优秀教师和高年级学长学姐分享选课经验和心得。内容包括：
-                    <br><br>
-                    1. 核心课程难度分析与学习建议<br>
-                    2. 选修课推荐与避坑指南<br>
-                    3. 不同方向课程组合推荐<br>
-                    4. 学习资源与备考技巧分享<br>
-                    <br>
-                    通过本次活动，希望能帮助同学们更好地规划自己的课程，提高学习效率，取得更好的成绩。欢迎所有对计算机专业课程感兴趣的同学参加！
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    本次迎新交流会面向新加入心理协会的同学，内容包括协会介绍、成员互动、活动预告及经验分享。<br><br>
+                    1. 协会文化与组织架构介绍<br>
+                    2. 会员互动与破冰游戏<br>
+                    3. 往期活动回顾与经验交流<br>
+                    4. 现场答疑与互动<br><br>
+                    欢迎新老会员积极参与！
                 </p>
             </div>
-            
-            <!-- 活动地点 -->
             <div class="p-4 bg-white mb-3">
                 <h2 class="text-base font-medium mb-2">活动地点</h2>
                 <div class="w-full h-40 bg-gray-200 rounded-lg overflow-hidden relative">
@@ -112,38 +90,33 @@
                         <div class="bg-white px-4 py-2 rounded-lg shadow-md">
                             <div class="flex items-center">
                                 <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
-                                <span class="font-medium">教学楼A301</span>
+                                <span class="font-medium">心理协会活动室</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            <!-- 活动组织者 -->
             <div class="p-4 bg-white mb-16">
                 <h2 class="text-base font-medium mb-2">活动组织者</h2>
                 <div class="flex items-center">
                     <img src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg" class="w-10 h-10 rounded-full object-cover" alt="组织者头像">
                     <div class="ml-3">
-                        <h3 class="font-medium">计算机科学与技术学院</h3>
-                        <p class="text-xs text-gray-500">已组织35场活动</p>
+                        <h3 class="font-medium">心理协会</h3>
+                        <p class="text-xs text-gray-500">已组织30场活动</p>
                     </div>
                     <button class="ml-auto text-blue-500 text-sm">关注</button>
                 </div>
             </div>
         </div>
-
-        <!-- 底部固定报名区域 -->
         <div class="absolute bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-3 flex items-center justify-between" style="bottom: 0px; width: 100%;">
             <div>
                 <div class="text-xs text-gray-500">活动免费</div>
-                <div class="font-medium text-blue-500">仅剩15个名额</div>
+                <div class="font-medium text-blue-500">仅剩22个名额</div>
             </div>
             <button id="enrollButton" class="bg-blue-500 text-white py-2 px-6 rounded-full">立即报名</button>
         </div>
     </div>
-
-    <!-- 报名表单弹窗 -->
+    <!-- 报名表单弹窗和报名成功弹窗同模板，带默认值 -->
     <div id="enrollForm" class="fixed inset-0 z-50 hidden" style="width: 375px; height: 812px; margin: auto; left: 0; right: 0;">
         <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
             <div class="bg-white rounded-lg w-4/5 max-w-sm p-5">
@@ -153,37 +126,30 @@
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
-            
-            <div class="mb-4">
-                <label class="block text-sm font-medium text-gray-700 mb-1">姓名</label>
-                <input type="text" class="w-full border border-gray-300 rounded-lg p-2 text-sm" placeholder="请输入您的姓名" id="nameInput" value="李铁柱">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">姓名</label>
+                    <input type="text" class="w-full border border-gray-300 rounded-lg p-2 text-sm" placeholder="请输入您的姓名" id="nameInput" value="李铁柱">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">手机号</label>
+                    <input type="tel" class="w-full border border-gray-300 rounded-lg p-2 text-sm" placeholder="请输入您的手机号" id="phoneInput" value="13306525577">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">学号/工号</label>
+                    <input type="text" class="w-full border border-gray-300 rounded-lg p-2 text-sm" placeholder="请输入您的学号或工号" id="idInput" value="2022435567782">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">备注</label>
+                    <textarea class="w-full border border-gray-300 rounded-lg p-2 text-sm h-20" placeholder="您有什么想对主办方说的吗？（选填）" id="remarkInput"></textarea>
+                </div>
+                <div class="flex items-center mb-4">
+                    <input type="checkbox" class="h-4 w-4 text-blue-600 rounded" id="agreeCheckbox">
+                    <label class="ml-2 block text-sm text-gray-700">我已阅读并同意 <span class="text-blue-500">《活动规则》</span></label>
+                </div>
+                <button id="submitEnrollButton" class="w-full bg-blue-500 text-white py-3 rounded-lg font-medium">确认报名</button>
             </div>
-            
-            <div class="mb-4">
-                <label class="block text-sm font-medium text-gray-700 mb-1">手机号</label>
-                <input type="tel" class="w-full border border-gray-300 rounded-lg p-2 text-sm" placeholder="请输入您的手机号" id="phoneInput" value="13306525577">
-            </div>
-            
-            <div class="mb-4">
-                <label class="block text-sm font-medium text-gray-700 mb-1">学号/工号</label>
-                <input type="text" class="w-full border border-gray-300 rounded-lg p-2 text-sm" placeholder="请输入您的学号或工号" id="idInput" value="2022435567782">
-            </div>
-            
-            <div class="mb-4">
-                <label class="block text-sm font-medium text-gray-700 mb-1">备注</label>
-                <textarea class="w-full border border-gray-300 rounded-lg p-2 text-sm h-20" placeholder="您有什么想对主办方说的吗？（选填）" id="remarkInput"></textarea>
-            </div>
-            
-            <div class="flex items-center mb-4">
-                <input type="checkbox" class="h-4 w-4 text-blue-600 rounded" id="agreeCheckbox">
-                <label class="ml-2 block text-sm text-gray-700">我已阅读并同意 <span class="text-blue-500">《活动规则》</span></label>
-            </div>
-            
-            <button id="submitEnrollButton" class="w-full bg-blue-500 text-white py-3 rounded-lg font-medium">确认报名</button>
         </div>
     </div>
-
-    <!-- 报名成功弹窗 -->
     <div id="successModal" class="fixed inset-0 z-50 hidden" style="width: 375px; height: 812px; margin: auto; left: 0; right: 0;">
         <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
             <div class="bg-white rounded-lg p-6 w-4/5 max-w-sm modal-content">
@@ -199,10 +165,8 @@
             </div>
         </div>
     </div>
-
-    <!-- 加载JavaScript -->
-    <script src="js/main.js"></script>
-    <script src="js/navigation.js"></script>
-    <script src="js/activity.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/activity.js"></script>
 </body>
 </html>
